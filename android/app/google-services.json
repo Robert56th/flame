@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "580984745107",
+    "firebase_url": "https://flame-mapua-university-194511.firebaseio.com",
+    "project_id": "flame-mapua-university-194511",
+    "storage_bucket": "flame-mapua-university-194511.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:580984745107:android:c123bf2bd2ac0ae48e7166",
+        "android_client_info": {
+          "package_name": "com.example.flame"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "580984745107-lctb3rf5knps34j8jf52on0p84hmd9f5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.flame",
+            "certificate_hash": "b9927d2873382c6f28fb65d7e59014d303ccd6a3"
+          }
+        },
+        {
+          "client_id": "580984745107-ha3vpcm6ts5354n02b9chf2md4k5jpp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDN0GecLOH8dUGboonpeBmy75HyyUAnQNM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "580984745107-ha3vpcm6ts5354n02b9chf2md4k5jpp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
