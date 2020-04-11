@@ -1,8 +1,3 @@
-// HI GUYS HOPE I CAN HELP U WITH DIS. :D
-
-
-
-
 
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
