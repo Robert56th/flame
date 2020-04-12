@@ -3,6 +3,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
+import './Login.dart';
 import 'homepage.dart';
 
 void main() => runApp(Login());
@@ -78,7 +79,7 @@ class _LoginState extends State<Login> {
             children: <Widget>[
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 60, 0, 0),
-                child: SizedBox(height: 350,child: Image.asset('assets/applogo.png')),
+                child: SizedBox(height: 300,child: Image.asset('assets/applogo.png')),
               ),
               Padding(
                 padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
