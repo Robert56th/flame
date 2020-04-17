@@ -1,6 +1,8 @@
+import 'package:flame/systeminfo.dart';
 import 'package:flutter/material.dart';
 
 import 'Userinfo.dart';
+import './systeminfo.dart';
 
 void main() {
   runApp(Homepage());
@@ -29,24 +31,15 @@ class _HomepageState extends State<Homepage> {
             //PAGE VIEW
             body: PageView(
               scrollDirection: Axis.horizontal,
-              controller: PageController(initialPage: 0),
+              controller: PageController(initialPage: 1),
               children: <Widget>[
                 Userinfo(),
                 //2nd Card
-                Padding(
-                  padding: const EdgeInsets.fromLTRB(30, 30, 30, 30),
-                  child: Card(
-                    elevation: 2,
-                    shape: RoundedRectangleBorder(
-                        borderRadius: new BorderRadius.circular(25)),
-                  ),
-                )
+                Systeminfo(),
               ],
             )));
   }
 }
-
-
 
 
 
