@@ -34,7 +34,7 @@ Future<FirebaseUser> handleSignIn() async {
   email = user.email;
   photo = user.photoUrl;
   detailList = [name, email, photo];
-  print(detailList);
+  //print(detailList);
 
   return user;
 }
@@ -66,44 +66,47 @@ class _LoginState extends State<Login> {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        appBar: AppBar(
-          centerTitle: true,
-          title: (Text(
-            'WELCOME',
-            style: TextStyle(fontFamily: 'Michroma'),
-          )),
-          backgroundColor: Colors.orange[600],
-        ),
-        body: Center(
-          child: Column(
-            children: <Widget>[
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 60, 0, 0),
-                child: SizedBox(height: 300,child: Image.asset('assets/applogo.png')),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(0, 40, 0, 0),
-                child: RaisedButton(
-                  shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30)),color: Colors.grey[200],
-                  child: Row(
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      SizedBox(height: 30, child: Image.asset('assets/Glogo.png')),
-                      Padding(
-                        padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
-                        child: Text('LOGIN', style: TextStyle(fontFamily: 'Michroma', fontSize: 20),),
-                      ),
-                    ],
-                  ),
-                  onPressed: () async {
-                    await handleSignIn();
-                    await setVisitingFlagIn();
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => Homepage()));
-                  },
+        // appBar: AppBar(
+        //   centerTitle: true,
+        //   title: (Text(
+        //     'WELCOME',
+        //     style: TextStyle(fontFamily: 'Michroma', letterSpacing: 7),
+        //   )),
+        //   backgroundColor: Colors.orange[400],
+        // ),
+        body: Container(
+          decoration: BoxDecoration(gradient: LinearGradient(begin: Alignment.topRight, end: Alignment.bottomLeft, colors: [Colors.orange[100], Colors.orangeAccent])),
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 170, 0, 0),
+                  child: SizedBox(height: 300,child: Image.asset('assets/applogo.png')),
                 ),
-              ),
-            ],
+                Padding(
+                  padding: const EdgeInsets.fromLTRB(0, 100, 0, 0),
+                  child: RaisedButton(
+                    shape: new RoundedRectangleBorder(borderRadius: new BorderRadius.circular(30)),color: Colors.grey[200],
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        SizedBox(height: 30, child: Image.asset('assets/Glogo.png')),
+                        Padding(
+                          padding: const EdgeInsets.fromLTRB(20, 15, 20, 15),
+                          child: Text('LOG IN', style: TextStyle(fontFamily: 'Montserrat', letterSpacing: 4, fontSize: 20),),
+                        ),
+                      ],
+                    ),
+                    onPressed: () async {
+                      await handleSignIn();
+                      await setVisitingFlagIn();
+                      Navigator.push(context,
+                          MaterialPageRoute(builder: (context) => Homepage()));
+                    },
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
