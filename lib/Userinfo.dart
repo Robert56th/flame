@@ -97,16 +97,21 @@ class _UserinfoState extends State<Userinfo> {
                             height: 200,
                           ),
                           Padding(
-                            padding: const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                            padding: const EdgeInsets.fromLTRB(90, 0, 90, 0),
                             child: RaisedButton(
                               shape: RoundedRectangleBorder(
                                   borderRadius: new BorderRadius.circular(20)),
-                              child: Text(
-                                'SIGN OUT',
-                                style: TextStyle(
-                                    fontFamily: 'Montserrat',
-                                    fontSize: 20,
-                                    letterSpacing: 2),
+                              child: Row(
+                                children: <Widget>[
+                                  Icon(Icons.exit_to_app),
+                                  Text(
+                                    ' SIGN OUT',
+                                    style: TextStyle(
+                                        fontFamily: 'Montserrat',
+                                        fontSize: 20,
+                                        letterSpacing: 1),
+                                  ),
+                                ],
                               ),
                               onPressed: () async {
                                 signOutGoogle();
